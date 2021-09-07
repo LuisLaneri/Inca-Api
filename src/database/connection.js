@@ -12,10 +12,13 @@ const dbSettings = {
     },
 };
 
-async function getConnection(){
+export async function getConnection(){
+    try{
     const pool = await sql.connect(dbSettings);
-    const result = await pool.request().query('SELECT * from Empleadoo');
-    console.log(result);
+    return pool;
+    }
+    catch(error){
+        console.error(error)
+    }
 }
 
-getConnection();

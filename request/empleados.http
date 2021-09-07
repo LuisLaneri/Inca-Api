@@ -1,0 +1,16 @@
+@api= http://localhost:3000/empleados 
+
+
+
+
+POST {{api}} 
+Content-Type: :application/json
+
+{
+"nombre":"Julian",
+"apellido":"Raimondo",
+"documento":"222222222",
+"fechanac":"1982-02-18",
+"domicilio":"en su casa",
+
+}
